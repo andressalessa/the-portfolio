@@ -35,31 +35,20 @@
 </head>
 
 <body class="bg-gray-950 text-white">
-    <header class="space-y-3 pt-[120px] bg-[url('/assets/Background_Intro.png')] bg-cover bg-center h-screen">
-        <?php include('./components/header.php') ?>
-    </header>
 
-    <footer class="space-y-1 pt-[120px] bg-[url('/assets/Background_Contacts.png')] bg-cover bg-center h-screen">
-        <div class="flex justify-center">
-            <p class="font-inconsolata mt-10 text-xl text-purple-400">Contato
-            </p>
+    <?php include('./components/header.php') ?>
+
+    <main class="bg-[#18181E] px-3 py-6">
+        <div class="max-w-screen-xl mx-auto text-center mb-12">
+            <p class="font-inconsolata text-red-400 text-xl">Meu trabalho</p>
+            <h2 class="font-asap text-2xl md:text-3xl font-bold">Veja os projetos em destaque</h2>
         </div>
-        <div class="flex justify-center">
-            <p class="font-asap font-black text-2xl">Gostou do meu trabalho?</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-screen-lg mx-auto" id="projetos">
+            <?php include('./components/projects.php') ?>
         </div>
-        <div class="flex justify-center">
-            <p class="font-maven text-center text-gray-400 text-md">
-                Entre em contato ou acompanhe as minhas redes sociais!
-            </p>
-        </div>
-        <!-- 
-            O group determina que o container pai será o grupo de hover 
-            e aí é possível usar no filho que desejar receber o comportamento quando o pai for hover o group-hover 
-        -->
-        <div class="flex flex-col items-center gap-4 pt-4">
-            <?php include('./components/social-buttons.php') ?>
-        </div>
-    </footer>
+    </main>
+
+    <?php include('./components/footer.php') ?>
 </body>
 
 </html>
